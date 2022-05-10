@@ -107,8 +107,12 @@ async function run() {
 run().catch(console.dir);
 
 
-app.get('/', (req, res) => {
+app.get('/hero', (req, res) => {
     res.send('Running Genius Server!!!')
+});
+
+app.get('/', (req, res) => {
+    res.send('Hero meets heroku!!!')
 });
 
 app.listen(port, () => {
